@@ -1,0 +1,33 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #b3b3d6;
+    color: #080505;
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+  /* Estilo do título */
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #0a335c;
+    margin-bottom: 20px;
+  }
+  
+  /* Container dos livros */
+  .livros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }

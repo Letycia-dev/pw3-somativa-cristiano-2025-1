@@ -2,7 +2,7 @@ import './App.css'
 
 import BookCard from './components/BookCard'
 
-import './assets/cavernas_aco.jpg'
+import capa_livro from'./assets/cavernas_aco.jpg'
 
 function App (){
 
@@ -13,6 +13,7 @@ function App (){
         titulo='As Cavernas de Aço'
         autor='Isaac Azimov'
         imagem={capa_livro} />
+
     </>
   )
 
