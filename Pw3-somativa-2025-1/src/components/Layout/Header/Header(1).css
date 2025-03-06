@@ -1,0 +1,7 @@
+header, h1{
+    overflow: hidden;
+    background-color: Black;
+    color: white;
+    padding: 5px ;
+    justify-items: center;
+}

@@ -1,0 +1,18 @@
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+p {
+  background-color: black;
+  color: white
+}
+
