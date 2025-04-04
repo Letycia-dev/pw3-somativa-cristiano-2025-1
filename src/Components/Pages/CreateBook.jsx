@@ -23,13 +23,14 @@ const CreateBook = () => {
 
     /* Monitoramento de mudança dos elementos do select em form*/
     function handlerChangeCategory(event) {
-        setBook({...book, cod_categoria : event.target.options[event.target.selectedIndex].text})
+        setBook({...book, cod_categoria : event.target.options[event.target.selectedIndex].value})
     }
 
     /* Envio dos dados para a Api */
     function submit(event) {
         event.preventDefault();   /* não enviar os dados para o banco */
         console.log(book);
+        insertBook(book);
     }
     
     /* Recupera os dados da Apirest */
@@ -47,11 +48,34 @@ const CreateBook = () => {
         response.json()
       ).then((categorias)=>{
          console.log('TESTE' + categorias.data);
+         setCategories(categorias.data);
       }).catch((error)=>{
         console.log('ERRO: ' + error);
       })
     }, []);
 
+/* INSERÇÃO DE LIVRO */
+
+    function insertBook(book){
+
+      fetch('http://127.0.0.1:5000/inserirLivro', {
+        method:'POST', 
+        mode:"cors",
+        headers:{
+          'Content-Type':'application/json',
+          'Access-Control-Allow-Origin':'*',
+          'Access-Control-Allow-Headers':'*'
+        },
+        body:JSON.stringify(book)
+      }).then((response)=>
+        response.json()
+      ).then((respJSON)=>{
+         console.log('RESPOSTA' + respJSON);
+      }).catch((error)=>{
+        console.log('ERRO: ' + error);
+      })
+
+    }
 
   return (
     <section className={style.create_book_container}>
@@ -88,6 +112,7 @@ const CreateBook = () => {
         id="cod_categoria"
         text="Categoria do Livro"
         handlerChange={handlerChangeCategory}
+        options={categories}
       />
 
       <Button
