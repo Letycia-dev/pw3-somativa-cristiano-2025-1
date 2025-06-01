@@ -48,7 +48,7 @@ router.post('/inserirLivro', (req, res)=>{
         );
     });
 
-    // return res.status(200).json({status:'TESTE DE INSERÇÃO DE LIVRO!'});
+     //return res.status(200).json({status:'TESTE DE INSERÇÃO DE LIVRO!'});
 
 });
 
@@ -77,7 +77,7 @@ router.get('/listagemLivros', (req, res)=>{
         );
     });
 
-    // return res.status(200).json({status:'TESTE DE LISTAGEM DE LIVROS!'});
+     //return res.status(200).json({status:'TESTE DE LISTAGEM DE LIVROS!'});
 
 });
 
@@ -108,7 +108,7 @@ router.get('/listagemLivro/:cod_livro', (req, res)=>{
         );
     });
 
-    // return res.status(200).json({status:'TESTE DE LISTAGEM DE LIVRO COM BUSCA POR CÓDIGO DE LIVRO!'});
+     //return res.status(200).json({status:'TESTE DE LISTAGEM DE LIVRO COM BUSCA POR CÓDIGO DE LIVRO!'});
 
 });
 
@@ -139,7 +139,7 @@ router.delete('/excluirLivro/:cod_livro', (req, res)=>{
         );
     });
 
-    // return res.status(200).json({status:'TESTE DE EXCLUSÃO DE LIVRO!'});
+     //return res.status(200).json({status:'TESTE DE EXCLUSÃO DE LIVRO!'});
 
 });
 
@@ -175,7 +175,7 @@ router.put('/alterarLivro', (req, res)=>{
         );
     });
 
-    // return res.status(200).json({status:'TESTE DE ALTERAÇÃO DE LIVRO!'});
+     //return res.status(200).json({status:'TESTE DE ALTERAÇÃO DE LIVRO!'});
 
 });
 

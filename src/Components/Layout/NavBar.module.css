@@ -1,10 +1,10 @@
 .navbar{
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
     background-color: #000154;
     padding: 1em;
 }
+
 
 .list{
     display: flex;
@@ -15,20 +15,15 @@
 
 .item{
     margin-right: 1em;
-    color: #FFF;
 }
 
 
 .item a{
-    color:#ffffff;
+    color:#7733FF;
     text-decoration: none;
 }
 
 
 .item a:hover{
-    color:#ffffff;
-}   
-
-.logo{
-    width: 120px;
+    color:#7733FF;
 }

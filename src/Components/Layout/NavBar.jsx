@@ -10,23 +10,33 @@ const NavBar = ()=>{
 
                 <ul className={style.list}>
 
-                    <Link to='/'>
-                        <li className={style.item}><img className={style.logo} src="./book.png" alt="Logotipo" /></li>
-                    </Link>
-                    
+                    <li className={style.item}>
 
-                    <Link to='/'>
-                        <li className={style.item}>HOME</li>
-                    </Link>
-                    
-                    <Link to='/newBook'>
-                        <li className={style.item}>CADASTRAR LIVROS</li>
-                    </Link>
-                    
+                        <Link to='/'>
 
-                    <Link to='/listBook'>
-                        <li className={style.item}>LISTAR LIVROS</li>
-                    </Link>
+                            <img className={style.logo} src="./book.png" alt="Logotipo" />
+
+                        </Link>
+
+                    </li>
+
+                    <li className={style.item}>
+
+                        <Link to='/'>HOME</Link>
+
+                    </li>
+
+                    <li className={style.item}>
+
+                        <Link to='/newBook'>CADASTRAR LIVROS</Link>
+
+                    </li>
+
+                    <li className={style.item}>
+
+                        <Link to='/listBook'> LISTAR LIVROS</Link>
+
+                    </li>
 
                 </ul>
 

@@ -2,11 +2,11 @@
 import { useState, useEffect } from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
 
-import style from './UpdateBook.module.css'
-import Input from '../Form/input.jsx'
-import Select from '../Form/Select.jsx'
-import Button from '../Form/Button.jsx'
 
+import style from './UpdateBooks.module.css'
+import Input from '../form/Input'
+import Select from '../form/Select'
+import Button from '../Form/Button'
 const UpdateBooks = () => {
 
         /* CRIAÇAO DO STATE DOS DADOS DOS LIVROS */
@@ -35,7 +35,7 @@ const UpdateBooks = () => {
 
         /* RECUPERA OS DADOS DE CATEGORIA DO BANCO DADOS */
         useEffect(()=>{
-                fetch('http://localhost:5000/listagemCateorias', {
+                fetch('http://localhost:5000/listagemCategorias', {
                         method:'GET',
                         headers:{
                                 'Content-Type':'application/json',
@@ -127,7 +127,7 @@ const UpdateBooks = () => {
                                         id='nome_livro'
                                         placeholder='Digite o título do livro'
                                         text='Digite o título do livro'
-                                        handlerOnchange={handlerChangeBook}
+                                        action={handlerChangeBook}
                                         value={book.nome_livro} />
 
                                 <Input 
@@ -136,7 +136,7 @@ const UpdateBooks = () => {
                                         id='autor_livro'
                                         placeholder='Digite o nome do autor'
                                         text='Digite o nome do autor'
-                                        handlerOnchange={handlerChangeBook} 
+                                        action={handlerChangeBook} 
                                         value={book.autor_livro}/>
 
                                 <Input 
@@ -145,17 +145,19 @@ const UpdateBooks = () => {
                                         id='descricao_livro'
                                         placeholder='Digite uma descrição para  livro'
                                         text='Descrição'
-                                        handlerOnchange={handlerChangeBook}
+                                        action={handlerChangeBook}
                                         value={book.descricao_livro} />
                                 
                                 <Select 
-                                        name="categoria_id"
+                                        name="cod_categoria"
+                                        id="cod_categoria"
                                         text="Selecione a categoria do livro"
                                         options={categories}
-                                        handlerOnChange={handleChangeCategory} />
+                                        action={handleChangeCategory} 
+                                        value={book.cod_categoria}/>
 
                                 <Button 
-                                label='Editar livro'/>
+                                label="Atualizar livro"/>
 
                         </form>
 

@@ -1,12 +1,22 @@
 .buttonContainer{
     width: 100%;
+
 }
 
 button{
     width: 100%;
-    font-family: Helvetica;
-    border: 1px solid #FFF;
+    border: 1px solid #000000;
     border-radius: 5px;
-    background: linear-gradient(180deg, rgba(17,179,53,0.9940709560191264) 0%, rgba(19,215,2,1) 100%);
+    background: linear-gradient(180deg, rgba(50, 50, 50) 0%, rgb(27, 27, 27) 100%);
     color: #FFF;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconDetails{
+    margin-right: 5px;
 }

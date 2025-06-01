@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const routerLivro = require('./route/routesLivro');
-const routesCategoria = require('./route/routesCategoria');//impotação de rotas
+const routesCategoria = require('./route/routesCategoria');
 
 const app = express();
 

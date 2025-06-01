@@ -1,10 +1,11 @@
+
 button{
-    background-color: #1646A0;
-    color: #FFF;
+    background-color:  rgba(255, 255, 255, 0.9);
+    color: #e01212;
     padding: 0 45px;
     border: 2px solid #FFF;
     border-radius: 10px;
-    height: 50px;
+    height: 40px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.2em;
@@ -13,5 +14,6 @@ button{
 }
 
 button:hover{
-    background-color: #16A026;
+    background-color: rgba(6, 50, 80);
+    color: white;
 }
